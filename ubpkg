@@ -10,7 +10,7 @@ version = 3
 command = sys.argv[1]
 package = sys.argv[2]
 
-if command == 'install':
+if command in ['install', 'i']:
     os.system(f'sudo pacman -Sy {package}')
-elif command == 'uninstall':
+elif command == ['uninstall', 'u', 'r']:
     os.system(f'sudo pacman -Rns {package}')
